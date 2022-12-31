@@ -1,15 +1,15 @@
 import React from 'react'
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 const windowHeight = Dimensions.get('window').height;
 
 
 
-function Header3({ value }) {
+function Header3({ value, navigation }) {
     return (
         <View style={styles.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.goBack() }>
                 <Ionicons name="arrow-back-circle-outline" size={35} color="black" />
             </TouchableOpacity>
             <Text style={styles.text}>{value}</Text>

@@ -1,27 +1,40 @@
 import React from 'react'
 
-import { Entypo } from '@expo/vector-icons';
+import { Entypo, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const windowHeight = Dimensions.get('window').height;
 
 
-function NavBar() {
+function NavBar({navigation}) {
+
+  const navigateToHome = () => {
+    navigation.navigate("Home", { name: "Home"})
+  }
+
+  const navigateToCalendar = () => {
+    navigation.navigate("Calendar", { name: "Calendar" })
+  }
+
+  const navigateToBlog = () => {
+    navigation.navigate("Blog", { name: "Blog" })
+  }
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.icons}>
+      <TouchableOpacity onPress={navigateToHome} style={styles.icons}>
         <Entypo name="home" size={24} color="rgba(42, 140, 245, 1)" />
         <Text style={styles.text}>Domov</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.icons}>
-        <Entypo name="home" size={24} color="rgba(42, 140, 245, 1)" />
-        <Text style={styles.text}>Domov</Text>
+      <TouchableOpacity onPress={navigateToCalendar} style={styles.icons}>
+        <AntDesign name="calendar" size={24} color="rgba(42, 140, 245, 1)" />
+        <Text style={styles.text}>Kalendár</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.icons}>
-        <Entypo name="home" size={24} color="rgba(42, 140, 245, 1)" />
-        <Text style={styles.text}>Domov</Text>
+      <TouchableOpacity onPress={navigateToBlog} style={styles.icons}>
+        <FontAwesome5 name="pen-fancy" size={24} color="rgba(42, 140, 245, 1)" />
+        <Text style={styles.text}>Blog</Text>
       </TouchableOpacity>
 
     </View>
@@ -30,21 +43,25 @@ function NavBar() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // position: 'absolute',
+    // bottom: 0,
+    maxHeight: 70,
+    width: '100%',
+    paddingBottom: 10,
+    paddingTop: 10,
     flexDirection: 'row',
-
-    alignItems: 'flex-end',
     justifyContent: 'space-around',
 
-    // maxHeight: 80,
-    // backgroundColor: 'rgba(245, 245, 245, 1)'
-    backgroundColor: 'red'
+    backgroundColor: 'rgba(245, 245, 245, 1)',
+
+    // backgroundColor: 'green'
+
   },
   icons: {
     alignItems: 'center',
   },
   text: {
-    color: "rgba(42, 140, 245, 1)"
+    // color: "rgba(42, 140, 245, 1)"
   }
 })
 

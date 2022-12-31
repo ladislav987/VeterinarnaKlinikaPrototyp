@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dimensions, StyleSheet, Text, View } from 'react-native'
+import { Button, Dimensions, StyleSheet, Text, View } from 'react-native'
 
 import Header3 from '../components/Header3';
 import Article from '../components/Article';
@@ -11,14 +11,16 @@ function Blog({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Header3 value={"Blog"}></Header3>
+            <Header3 value={"Blog"} navigation={navigation}></Header3>
 
             <Article value={"Clanok 1"} navigation={navigation}></Article>
             <Article value={"Clanok 2"} navigation={navigation}></Article>
             <Article value={"Clanok 3"} navigation={navigation}></Article>
             <Article value={"Clanok 4"} navigation={navigation}></Article>
 
-            <NavBar style={styles.somarina}></NavBar>
+            <View style={styles.container2}>
+                <NavBar navigation={navigation} />
+            </View>
         </View>
     )
 }
@@ -28,6 +30,13 @@ function Blog({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    container2: {
+        flex: 1,
+        // flexDirection: 'row',
+        // backgroundColor: 'red',
+        // alignItems: 'center',
+        justifyContent: 'flex-end'
     },
     h1: {
         flex: 1,
@@ -57,7 +66,7 @@ const styles = StyleSheet.create({
         // flex: 1,
         // alignItems: 'flex-end',
         // backgroundColor: 'green',
-        alignItems: 'flex-end',
+        // alignItems: 'flex-end',
         // flexDirection: 'row-reverse',
         // justifyContent: 'flex-end',
         // alignSelf: 'flex-end',
