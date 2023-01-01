@@ -47,12 +47,15 @@ const styles = StyleSheet.create({
     // bottom: 0,
     maxHeight: 70,
     width: '100%',
+    minHeight: 60,
     paddingBottom: 10,
     paddingTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-around',
 
-    backgroundColor: 'rgba(245, 245, 245, 1)',
+    backgroundColor: 'red',
+    // backgroundColor: 'rgba(245, 245, 245, 1)',
+    zIndex: 99
 
     // backgroundColor: 'green'
 
