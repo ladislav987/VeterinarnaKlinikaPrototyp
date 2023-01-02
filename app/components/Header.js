@@ -8,7 +8,7 @@ const windowHeight = Dimensions.get('window').height;
 function Header({ value }) {
     return (
         <View style={styles.container}>
-            <Text>{value}</Text>
+            <Text style={styles.text}>{value}</Text>
         </View>
     )
 }
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
 
         marginTop: windowHeight * 0.05,
+        marginBottom: windowHeight * 0.05,
 
         // borderBottomColor: "black",
         // borderBottomOpacity: 0.5,
@@ -29,6 +30,10 @@ const styles = StyleSheet.create({
     image: {
         width: 50,
         height: 50,
+    },
+    text: {
+        fontSize: 30,
+        fontWeight: 'bold',
     }
 })
 

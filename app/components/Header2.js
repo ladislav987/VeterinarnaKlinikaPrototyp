@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
         marginTop: windowHeight * 0.04,
+        marginBottom: windowHeight * 0.05,
 
         paddingLeft: 15,
         paddingRight: 15,
