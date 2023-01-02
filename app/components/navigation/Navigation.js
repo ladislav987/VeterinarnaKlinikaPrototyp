@@ -20,7 +20,7 @@ export const Navigation = ({ onboarded }) => {
     return (
         <>
             <Stack.Navigator
-                initialRouteName={onboarded ? 'Ordering' : 'Ordering'}>
+                initialRouteName={onboarded ? 'Home' : 'Home'}>
 
 
                 <Stack.Screen
