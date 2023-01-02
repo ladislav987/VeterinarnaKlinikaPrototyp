@@ -1,9 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-function Schedule({ cosi }) {
+function Schedule({ cosi, navigation }) {
+    const navigateToOrdering = () => {
+        navigation.navigate("Ordering", { name: "Ordering" })
+    }
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={navigateToOrdering}>
             <View style={styles.timeContainer}>
                 <Text style={styles.textInTime}>8:00</Text>
                 <View style={styles.verticleLine}></View>
@@ -15,7 +18,7 @@ function Schedule({ cosi }) {
                 </View>
             </View>
             <Text>{cosi}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -24,7 +27,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         flexDirection: 'row',
         alignContent: 'flex-end',
-        zIndex: 1
+        // zIndex: 1
         // marginBottom: 20,
         // marginTop: 20
 
@@ -32,7 +35,8 @@ const styles = StyleSheet.create({
         // flexDirection:'row',
         // alignSelf: 'flex-start',
         // // maxHeight:80,
-        // backgroundColor:'green'
+        // backgroundColor:'green',
+        marginBottom: 30,
     },
     timeContainer: {
         // flex: 1,

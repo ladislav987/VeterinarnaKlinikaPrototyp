@@ -5,24 +5,40 @@ function Day() {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.nieco}>
-                <Text>Pon</Text>
-                <Text>26</Text>
+                <Text style={styles.text} >Pon</Text>
+                <Text style={styles.text} >26</Text>
             </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        // backgroundColor: 'blue',
-        flex: 1,
-        marginRight: 10,
-        minHeight: 50,
+    container: {
+        // flex: 1,
+
+        // backgroundColor: 'red'
+        // backgroundColor: 'green',
+        // maxHeight: 100,
+        // marginBottom: 1500
+
+
     },
 
-    nieco:{
+    nieco: {
+        // flex: 1,
         alignSelf: 'flex-start',
-        // backgroundColor: 'blue'
+        backgroundColor: 'rgba(0, 115, 204, 1)',
+        marginRight: 10,
+        // height: '100%',
+        // minHeight: '100%',
+        borderRadius: 10,
+        // marginBottom: 90,
+        padding: 15
+        // paddingBottom: 60,
+        // color: 'white',
+    },
+    text:{
+        color: 'white',
     }
 })
 

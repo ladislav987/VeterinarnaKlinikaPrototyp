@@ -10,6 +10,7 @@ import Calendar from '../../screens/Calendar';
 import Blog from '../../screens/Blog';
 import ArticleOne from '../../screens/ArticleOne';
 import Comments from '../../screens/Comments';
+import Ordering from '../../screens/Ordering';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,7 @@ export const Navigation = ({ onboarded }) => {
     return (
         <>
             <Stack.Navigator
-                initialRouteName={onboarded ? 'Calendar' : 'Calendar'}>
+                initialRouteName={onboarded ? 'Ordering' : 'Ordering'}>
 
 
                 <Stack.Screen
@@ -63,6 +64,12 @@ export const Navigation = ({ onboarded }) => {
                     name="Comments"
                     component={Comments}
                     options={{ title: 'Comments', headerShown: false, }}
+                />
+
+                <Stack.Screen
+                    name="Ordering"
+                    component={Ordering}
+                    options={{ title: 'Ordering', headerShown: false, }}
                 />
 
             </Stack.Navigator>

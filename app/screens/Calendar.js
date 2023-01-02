@@ -10,7 +10,7 @@ function Calendar({ navigation }) {
     <View style={styles.container}>
       <Header3 value={"Kalendár"} navigation={navigation}></Header3>
 
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.daysContainer}>
+      <ScrollView  horizontal={true} showsHorizontalScrollIndicator={false} style={styles.daysContainer}>
         <Day></Day>
         <Day></Day>
         <Day></Day>
@@ -45,26 +45,26 @@ function Calendar({ navigation }) {
         <Day></Day>
       </ScrollView>
 
-      <ScrollView contentInset={{ top: 0, left: 0, bottom: 60, right: 0 }}>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule></Schedule>
-        <Schedule cosi={'ano'}></Schedule>
+      <ScrollView showsHorizontalScrollIndicator={false}  style={styles.timeContainer}>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        <Schedule navigation={navigation}></Schedule>
+        {/* <Schedule cosi={'ano'}></Schedule> */}
 
       </ScrollView>
 
-      <View style={styles.container2}>
-        <NavBar navigation={navigation} />
-      </View>
+        <View style={styles.container2}>
+          <NavBar navigation={navigation} />
+        </View>
 
 
     </View>
@@ -74,21 +74,33 @@ function Calendar({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // backgroundColor: 'red'sd
   },
   container2: {
-    flex: 1,
+    // flex: 1,
     // flexDirection: 'row',
     // backgroundColor: 'red',
     // alignItems: 'center',
     justifyContent: 'flex-end'
   },
   daysContainer: {
-    backgroundColor: 'red',
+    // flex: 1,
+    // backgroundColor: 'red',
     flexDirection: 'row',
-    maxHeight: 50,
+    marginBottom: 10,
+    minHeight: '11%',
+
     // alignItems: 'flex-start',
     // width: 800,
-    marginRight: 20
+    marginRight: 20,
+    marginLeft: 20,
+
+  },
+  timeContainer: {
+    // flex: 1,
+    // backgroundColor: 'green',
+    // marginBottom: 50
+    paddingBottom: 10
   }
 })
 

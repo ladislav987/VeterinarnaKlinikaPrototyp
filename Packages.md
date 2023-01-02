@@ -5,3 +5,4 @@ npm i @react-navigation/native-stack
 npm i expo-web-browser
 npm i expo-auth-session
 npm i expo-random
+npm i react-native-dropdown-picker

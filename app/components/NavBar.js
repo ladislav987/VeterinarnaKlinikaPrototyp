@@ -45,19 +45,19 @@ const styles = StyleSheet.create({
   container: {
     // position: 'absolute',
     // bottom: 0,
-    maxHeight: 70,
+    // maxHeight: 70,
     width: '100%',
-    minHeight: 60,
+    maxHeight: 60,
     paddingBottom: 10,
     paddingTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-around',
 
-    backgroundColor: 'red',
-    // backgroundColor: 'rgba(245, 245, 245, 1)',
-    zIndex: 99
+    backgroundColor: 'rgba(245, 245, 245, 1)',
+    // zIndex: 99
 
-    // backgroundColor: 'green'
+    // backgroundColor: 'green',
+    alignSelf: 'flex-end'
 
   },
   icons: {
